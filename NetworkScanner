@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo "What Scan Do you Want to Run?"
+echo "1:Basic Scan"
+echo "2:Advanced Scan"
+
+read NUM
+
+     #Hosts .txt Should be changed to the correct file if needed
+	 
+	 if [ $NUM = "1" ]
+	 then
+	    echo Running Basic Scan
+		nmap -sV -Pn -iL Hosts.txt >> NetworkScan
+	 
+	 elif [ $NUM = "2"]
+	 then
+	    echo Running Advanced Scan
+		nmap -O -sV -sC --traceroute -iL Hosts.txt >> NetworkScan
+	 else
+	    echo ERROR Invalid Input
+	
+fi
+
+echo "SCAN IS COMPLETE"

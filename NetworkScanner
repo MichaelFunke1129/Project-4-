@@ -6,7 +6,7 @@ echo "2:Advanced Scan"
 
 read NUM
 
-     #Hosts .txt Should be changed to the correct file if needed
+     #Hosts.txt Should be changed to the correct file if needed
 	 
 	 if [ $NUM = "1" ]
 	 then
